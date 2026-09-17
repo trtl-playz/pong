@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bshi4tg1ccdcx"]
 
+[ext_resource type="Script" uid="uid://nrf3o5w6l1w3" path="res://scripts/pad_1.gd" id="1_vu3nc"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_13pwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sd1u"]
 size = Vector2(26.000002, 250)
 
 [node name="pad1" type="CharacterBody2D" unique_id=894277853]
+script = ExtResource("1_vu3nc")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2127822551]
 position = Vector2(4.7683716e-07, -6.1690807e-06)

@@ -1,6 +1,8 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789570774
+::res://::1789603409
+AGENTS.md::TextFile::-1::1789602469::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5308645140783382228::1789570184::1789570190::1::::<><><>0<>0<>bcc6bb20257fd4fc9fac1a05637102c4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://scenes/::1789570849
+README.md::TextFile::-1::1789603409::0::1::::<><><>0<>0<><>::
+::res://scenes/::1789574220
 pad_1.tscn::PackedScene::3664809045818031191::1789570705::0::1::::<><><>0<>0<><>::
-root.tscn::PackedScene::8928297834779866582::1789570849::0::1::::<><><>0<>0<><>::uid://bshi4tg1ccdcx::::res://scenes/pad_1.tscn
+root.tscn::PackedScene::8928297834779866582::1789574220::0::1::::<><><>0<>0<><>::uid://bshi4tg1ccdcx::::res://scenes/pad_1.tscn
