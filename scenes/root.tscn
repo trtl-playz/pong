@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://d0g604ulvxlni"]
 
 [ext_resource type="PackedScene" uid="uid://bshi4tg1ccdcx" path="res://scenes/pad_1.tscn" id="1_j5px3"]
+[ext_resource type="PackedScene" uid="uid://dhabs3fxf4gxp" path="res://scenes/ball.tscn" id="2_twpsu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13pwd"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sd1u"]
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13pwd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sd1u"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j4vek"]
 
@@ -22,15 +23,16 @@ scale = Vector2(1919.9996, 1082)
 mesh = SubResource("BoxMesh_13pwd")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="border" unique_id=902514419]
+collision_layer = 2
+
+[node name="top" type="CollisionShape2D" parent="border/StaticBody2D" unique_id=1714022087]
+position = Vector2(0, -542)
+rotation = -3.1415925
+shape = SubResource("WorldBoundaryShape2D_13pwd")
 
 [node name="bot" type="CollisionShape2D" parent="border/StaticBody2D" unique_id=2085805000]
 position = Vector2(0, 542)
 shape = SubResource("WorldBoundaryShape2D_3sd1u")
-
-[node name="top" type="CollisionShape2D" parent="border/StaticBody2D" unique_id=1714022087]
-position = Vector2(0, -542)
-rotation = 3.1415927
-shape = SubResource("WorldBoundaryShape2D_13pwd")
 
 [node name="left" type="CollisionShape2D" parent="border/StaticBody2D" unique_id=93241850]
 position = Vector2(-962, 0)
@@ -46,3 +48,5 @@ shape = SubResource("WorldBoundaryShape2D_hjkgo")
 
 [node name="pad1" parent="." unique_id=894277853 instance=ExtResource("1_j5px3")]
 position = Vector2(-900, 0)
+
+[node name="ball" parent="." unique_id=1664673057 instance=ExtResource("2_twpsu")]

@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dhabs3fxf4gxp"]
 
+[ext_resource type="Script" uid="uid://bml2gdq30gj6i" path="res://scripts/ball.gd" id="1_7s4qf"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_13pwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13pwd"]
 size = Vector2(25.999996, 26)
 
 [node name="ball" type="CharacterBody2D" unique_id=1664673057]
+script = ExtResource("1_7s4qf")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1083033131]
 scale = Vector2(26, 26)

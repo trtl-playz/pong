@@ -1,8 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789603409
+::res://::1789604353
 AGENTS.md::TextFile::-1::1789602469::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5308645140783382228::1789570184::1789570190::1::::<><><>0<>0<>bcc6bb20257fd4fc9fac1a05637102c4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1789603409::0::1::::<><><>0<>0<><>::
-::res://scenes/::1789574220
-pad_1.tscn::PackedScene::3664809045818031191::1789570705::0::1::::<><><>0<>0<><>::
-root.tscn::PackedScene::8928297834779866582::1789574220::0::1::::<><><>0<>0<><>::uid://bshi4tg1ccdcx::::res://scenes/pad_1.tscn
+::res://scenes/::1789604725
+ball.tscn::PackedScene::7650678297259254541::1789604335::0::1::::<><><>0<>0<><>::
+pad_1.tscn::PackedScene::3664809045818031191::1789604419::0::1::::<><><>0<>0<><>::uid://nrf3o5w6l1w3::::res://scripts/pad_1.gd
+root.tscn::PackedScene::8928297834779866582::1789604725::0::1::::<><><>0<>0<><>::uid://bshi4tg1ccdcx::::res://scenes/pad_1.tscn<>uid://dhabs3fxf4gxp::::res://scenes/ball.tscn
+::res://scripts/::1789604419
+pad_1.gd::GDScript::947903759019110008::1789604419::0::1::::<>CharacterBody2D<><>0<>0<><>::
