@@ -15,5 +15,4 @@ scale = Vector2(26, 26)
 mesh = SubResource("BoxMesh_13pwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1891502073]
-position = Vector2(-2.3841858e-07, 0)
 shape = SubResource("RectangleShape2D_13pwd")

@@ -1,25 +1,25 @@
-##tutorial: https://www.youtube.com/watch?v=H5lDDUAnrrY
-
 extends CharacterBody2D
 
-#var speed: float = 0
-var ranX: float = 300
-var ranY: float = 0
+const initSpeed: int = 500
+var speed: int = initSpeed
+var direction: Vector2
 
 func _ready() -> void:
-	#ranX = randf_range(ranX, -ranX) #get random dir to fling ball
-	#ranX = randf_range(ranY, -ranY)
-	print(ranX)
-	print(ranY)
-	
-	velocity = Vector2(ranX, ranY) * 2
+	direction = get_random_direction()
+
+func _process(delta: float) -> void:
+	if position.y <= -550:
+		position.y = 540
+	if position.y >= 550:
+		position.y = -540
 
 func _physics_process(delta: float) -> void:
-	move_and_collide(velocity * delta)
-	
-	if position.y >= 560:
-		position.y = -556
-		print("ball left bottom")
-	elif position.y <= -560:
-		position.y = 556
-		print("ball left top")
+	var collision = move_and_collide(direction * speed * delta)
+	if collision:
+		direction = direction.bounce(collision.get_normal())
+
+func get_random_direction() -> Vector2:
+	var newDir = Vector2()
+	newDir.x = [1, -1].pick_random()
+	newDir.y = randf_range(-1, 1)
+	return newDir.normalized()

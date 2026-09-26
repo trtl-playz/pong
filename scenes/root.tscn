@@ -48,5 +48,6 @@ shape = SubResource("WorldBoundaryShape2D_hjkgo")
 
 [node name="pad1" parent="." unique_id=894277853 instance=ExtResource("1_j5px3")]
 position = Vector2(-900, 0)
+collision_layer = 3
 
 [node name="ball" parent="." unique_id=1664673057 instance=ExtResource("2_twpsu")]

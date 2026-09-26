@@ -1,1 +1,4 @@
+res://scenes/ball.tscn
+res://scripts/ball.gd
 res://scenes/root.tscn
+res://scenes/pad_1.tscn
