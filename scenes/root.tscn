@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bshi4tg1ccdcx" path="res://scenes/pad_1.tscn" id="1_j5px3"]
 [ext_resource type="PackedScene" uid="uid://dhabs3fxf4gxp" path="res://scenes/ball.tscn" id="2_twpsu"]
+[ext_resource type="PackedScene" uid="uid://drogycl0yjot8" path="res://scenes/logic_manager.tscn" id="3_lrqlo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13pwd"]
 
@@ -51,3 +52,6 @@ position = Vector2(-900, 0)
 collision_layer = 3
 
 [node name="ball" parent="." unique_id=1664673057 instance=ExtResource("2_twpsu")]
+
+[node name="logicManager" parent="." unique_id=2057247662 instance=ExtResource("3_lrqlo")]
+position = Vector2(-492, -230)

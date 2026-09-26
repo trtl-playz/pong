@@ -3,3 +3,5 @@ res://scripts/ball.gd
 res://scenes/root.tscn
 res://scenes/pad_1.tscn
 res://scripts/pad_1.gd
+res://scenes/logic_manager.tscn
+res://scripts/logic_manager.gd

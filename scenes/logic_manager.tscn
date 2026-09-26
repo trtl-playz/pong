@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://drogycl0yjot8"]
+
+[ext_resource type="Script" uid="uid://dsm3t6oxu8siq" path="res://scripts/logic_manager.gd" id="1_a1ysp"]
+
+[node name="logicManager" type="Node2D" unique_id=2057247662]
+script = ExtResource("1_a1ysp")
