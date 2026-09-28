@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bshi4tg1ccdcx" path="res://scenes/pad_1.tscn" id="1_j5px3"]
 [ext_resource type="PackedScene" uid="uid://dhabs3fxf4gxp" path="res://scenes/ball.tscn" id="2_twpsu"]
 [ext_resource type="PackedScene" uid="uid://drogycl0yjot8" path="res://scenes/logic_manager.tscn" id="3_lrqlo"]
+[ext_resource type="PackedScene" uid="uid://bdooue5quikx8" path="res://scenes/pad_2.tscn" id="3_sqa0i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13pwd"]
 
@@ -16,6 +17,9 @@
 
 [node name="root" type="Node2D" unique_id=1951602209]
 
+[node name="logicManager" parent="." unique_id=2057247662 instance=ExtResource("3_lrqlo")]
+position = Vector2(-492, -230)
+
 [node name="border" type="Node2D" parent="." unique_id=1382003777]
 
 [node name="bg" type="MeshInstance2D" parent="border" unique_id=307134842]
@@ -25,6 +29,7 @@ mesh = SubResource("BoxMesh_13pwd")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="border" unique_id=902514419]
 collision_layer = 2
+collision_mask = 2
 
 [node name="top" type="CollisionShape2D" parent="border/StaticBody2D" unique_id=1714022087]
 position = Vector2(0, -542)
@@ -51,7 +56,8 @@ shape = SubResource("WorldBoundaryShape2D_hjkgo")
 position = Vector2(-900, 0)
 collision_layer = 3
 
-[node name="ball" parent="." unique_id=1664673057 instance=ExtResource("2_twpsu")]
+[node name="pad2" parent="." unique_id=1581844306 node_paths=PackedStringArray("target") instance=ExtResource("3_sqa0i")]
+position = Vector2(900, 0)
+target = NodePath("../ball")
 
-[node name="logicManager" parent="." unique_id=2057247662 instance=ExtResource("3_lrqlo")]
-position = Vector2(-492, -230)
+[node name="ball" parent="." unique_id=1664673057 instance=ExtResource("2_twpsu")]

@@ -1,3 +1,5 @@
+#tutorial https://www.youtube.com/watch?v=AHno-nd2F_I
+
 extends CharacterBody2D
 
 const initSpeed: int = 500
