@@ -9,11 +9,11 @@ var direction: Vector2
 func _ready() -> void:
 	direction = get_random_direction()
 
-func _process(delta: float) -> void:
-	if position.y <= -550:
-		position.y = 540
-	if position.y >= 550:
-		position.y = -540
+#func _process(delta: float) -> void:
+	#if position.y <= -550:
+		#position.y = 540
+	#if position.y >= 550:
+		#position.y = -540
 
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(direction * speed * delta)

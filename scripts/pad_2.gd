@@ -9,4 +9,4 @@ var ballPos
 func _process(delta: float) -> void:
 	ballPos = target.position.y
 	
-	position.y = ballPos * speed * delta
+	position.y = ballPos # * delta

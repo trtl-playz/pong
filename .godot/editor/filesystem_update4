@@ -1,5 +1,2 @@
-res://scenes/pad_2.tscn
-res://scripts/pad_2.gd
-res://scripts/ball.gd
-res://scripts/logic_manager.gd
+res://scenes/game_scene.tscn
 res://scenes/root.tscn
