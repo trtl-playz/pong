@@ -1,11 +1,63 @@
 [gd_scene format=3 uid="uid://d0g604ulvxlni"]
 
-[ext_resource type="PackedScene" uid="uid://042rab8ln4vl" path="res://scenes/game_scene.tscn" id="2_twpsu"]
+[ext_resource type="PackedScene" uid="uid://bshi4tg1ccdcx" path="res://scenes/pad_1.tscn" id="2_sqa0i"]
+[ext_resource type="PackedScene" uid="uid://bdooue5quikx8" path="res://scenes/pad_2.tscn" id="3_jh1ax"]
 [ext_resource type="PackedScene" uid="uid://drogycl0yjot8" path="res://scenes/logic_manager.tscn" id="3_lrqlo"]
+[ext_resource type="PackedScene" uid="uid://dhabs3fxf4gxp" path="res://scenes/ball.tscn" id="4_kycxp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j287u"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5sfjl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3hfy5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7pvxh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y3xxt"]
 
 [node name="root" type="Node2D" unique_id=1951602209]
 
-[node name="logicManager" parent="." unique_id=2057247662 instance=ExtResource("3_lrqlo")]
+[node name="logicManager" parent="." unique_id=2057247662 node_paths=PackedStringArray("ballObj") instance=ExtResource("3_lrqlo")]
 position = Vector2(-492, -230)
+ballObj = NodePath("../game/ball")
 
-[node name="gameScene" parent="." unique_id=1188929098 instance=ExtResource("2_twpsu")]
+[node name="game" type="Node2D" parent="." unique_id=870181482]
+
+[node name="border" type="Node2D" parent="game" unique_id=94164760]
+
+[node name="bg" type="MeshInstance2D" parent="game/border" unique_id=930878794]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(1919.9996, 1082)
+mesh = SubResource("BoxMesh_j287u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="game/border" unique_id=408553549]
+
+[node name="top" type="CollisionShape2D" parent="game/border/StaticBody2D" unique_id=26092100]
+position = Vector2(0, -542)
+rotation = -3.1415925
+shape = SubResource("WorldBoundaryShape2D_5sfjl")
+
+[node name="bot" type="CollisionShape2D" parent="game/border/StaticBody2D" unique_id=953567354]
+position = Vector2(0, 542)
+shape = SubResource("WorldBoundaryShape2D_3hfy5")
+
+[node name="left" type="CollisionShape2D" parent="game/border/StaticBody2D" unique_id=1741081027]
+position = Vector2(-962, 0)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_7pvxh")
+
+[node name="right" type="CollisionShape2D" parent="game/border/StaticBody2D" unique_id=373059387]
+position = Vector2(962, 0)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_y3xxt")
+
+[node name="Camera2D" type="Camera2D" parent="game" unique_id=1566486748]
+
+[node name="pad1" parent="game" unique_id=894277853 instance=ExtResource("2_sqa0i")]
+position = Vector2(-900, 0)
+
+[node name="pad2" parent="game" unique_id=1581844306 node_paths=PackedStringArray("target") instance=ExtResource("3_jh1ax")]
+position = Vector2(900, 0)
+target = NodePath("../ball")
+
+[node name="ball" parent="game" unique_id=1664673057 instance=ExtResource("4_kycxp")]
